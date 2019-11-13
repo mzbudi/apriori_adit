@@ -1,5 +1,9 @@
 <?php
 error_reporting(0);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+ini_set('max_execution_time', 300);
+// error_reporting(E_ALL);
 session_start();
 $menu = '';
 if (isset($_GET['menu'])) {
@@ -56,9 +60,9 @@ include_once 'fungsi.php';
         <![endif]-->
 
 
-        <section id="pageloader">
+        <!-- <section id="pageloader">
             <div class="loader-item fa fa-spin colored-border"></div>
-        </section> <!-- /#pageloader -->
+        </section> /#pageloader -->
 
         <?php
         include "header.php";
@@ -83,6 +87,7 @@ include_once 'fungsi.php';
         } else {
             include "home.php";
         }
+        
         ?>
 
         
