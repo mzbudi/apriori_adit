@@ -181,7 +181,7 @@ $jumlah=$db_object->db_num_rows($query);
 function get_produk_to_in($produk){
     $ex = explode(",", $produk);
     //$temp = "";
-    for ($i=0; $i < count($ex); $i++) { 
+    for ($i=0; $i < count($ex); $i++) {
 
         $jml_key = array_keys($ex, $ex[$i]);
         if(count($jml_key)>1){

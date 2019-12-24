@@ -20,7 +20,7 @@ include_once "fungsi.php";
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <title>Login - Apriori toko</title>
@@ -42,67 +42,62 @@ include_once "fungsi.php";
         <link rel="stylesheet" href="css/templatemo-style.css">
         <link rel="stylesheet" href="scripts/ionicons/css/ionicons.min.css">
         <link rel="stylesheet" href="scripts/toast/jquery.toast.min.css">
+        <style>
+            .login-box{
+                width: 350px;
+	            background: white;
+	            /*meletakkan form ke tengah*/
+	            margin: 0 auto;
+	            padding: 30px 20px;
+            }
+
+            .login-img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .form-login{
+	            /*membuat lebar form penuh*/
+                box-sizing : border-box;
+                width: 100%;
+                padding: 10px;
+                font-size: 11pt;
+                margin-bottom: 20px;
+            }
+
+            .image-down{
+                margin-top: 120px;
+            }
+        </style>
         <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
 
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-        <![endif]-->
-
-        <section id="pageloader">
-            <div class="loader-item fa fa-spin colored-border"></div>
-        </section> <!-- /#pageloader -->
-
-        <?php
-        include "header.php";
-        ?>
-
-        <div class="content-wrapper" align="center" >
-            <div class="inner-container container">
-                <div class="row">
-                    <div class="section-header col-md-12">
-                        <h2>Halaman Login</h2>
-                        <!-- <span>Subtitle Goes Here</span> -->
-                    </div> <!-- /.section-header -->
-                </div> <!-- /.row -->
-                <div class="contact-form" >
-                    <div class="box-content col-md-12">
-                        <div class="row">
-                            <div class="col-md-7">
-                                <p></p>
-                                <!-- <h3 class="contact-title">Send Us Email</h3> -->
-                                <?php
-                                if (isset($komen)) {
-                                    display_error("Login gagal");
-                                }
-                                ?>
-                                <div class="contact-form-inner">
-                                    <form method="post" action="cek-login.php" >
-                                        <p>
-                                            <label for="username">Username:</label>
-                                            <input name="username" type="text" id="username">
-                                        </p>
-                                        <p>
-                                            <label for="password">Password:</label>
-                                            <input name="password" type="password" id="password">   
-                                        </p>
-                                        
-                                        <input type="submit" class="mainBtn" id="submit" value="Login" />
-                                    </form> 
-
-                                </div> <!-- /.contact-form-inner -->
-                                <!-- <div id="message"></div> -->
-                            </div> <!-- /.col-md-7 -->
-                            
-                        </div> <!-- /.row -->
-                    </div> <!-- /.box-content -->
-                </div> <!-- /.contact-form -->
-            </div> <!-- /.inner-content -->
-        </div> <!-- /.content-wrapper -->
-
+            <?php
+             if (isset($komen)) {
+                display_error("Login gagal");
+            }
+            ?>
+            <div class="image-down">
+                <img class="login-img" src="images/lock.png" height="70" width="70">
+            </div>
+            <div class="login-box">
+            <!-- <img src="images/lock.png" height="70" width="70"> -->
+                <form method="post" action="cek-login.php" >
+                    <p>
+                        <label for="username">Username:</label>
+                        <input class="form-login" name="username" type="text" id="username">
+                    </p>
+                    <p>
+                        <label for="password">Password:</label>
+                        <input class="form-login" name="password" type="password" id="password">   
+                    </p>
+                    <center><input type="submit" class="mainBtn" id="submit" value="Login" /></center>
+                </form> 
+            </div>
         <script src="js/vendor/jquery-1.11.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"></script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
