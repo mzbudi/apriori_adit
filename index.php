@@ -63,9 +63,7 @@ include_once 'fungsi.php';
             box-sizing: border-box;
         }
 
-        body {
-            font-family: Verdana, sans-serif;
-        }
+        
 
         .mySlides {
             display: none;
@@ -77,7 +75,7 @@ include_once 'fungsi.php';
 
         /* Slideshow container */
         .slideshow-container {
-            max-width: 1000px;
+            width: 100%;
             position: relative;
             margin: auto;
         }
@@ -113,8 +111,8 @@ include_once 'fungsi.php';
             transition: background-color 0.6s ease;
         }
 
-        .active {
-            background-color: #717171;
+        .active-tab {
+            background-color: orange;
         }
 
         /* Fading animation */
@@ -231,10 +229,10 @@ include_once 'fungsi.php';
                 slideIndex = 1
             }
             for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+                dots[i].className = dots[i].className.replace(" active-tab", "");
             }
             slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+            dots[slideIndex - 1].className += " active-tab";
             setTimeout(showSlides, 5000); // Change image every 2 seconds
         }
         //]]>
