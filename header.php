@@ -6,23 +6,21 @@ if(isset($_GET['menu'])){
 
 ?>
 
-<header class="site-header container-fluid">
-            <div class="top-header" align="center">
+<header class="site-header container-fluid" >
+            <div class="top-header" align="center" style="background-color: #efefef">
                 <div class="logo col-md-12 col-sm-12">
-                    <h1><a href="index.php"><em>APOTEK</em> DUA PUTRI</a></h1><br/>
-                    <span>PENERAPAN ALGORITMA APRIORI PADA APOTEK DUA PUTRI</span>
+                    <h1><a href="index.php"><em>PRI</em>MART</a></h1><br/>
+                    <span>Implementasi Data Mining Pada Data Pembelanjaan Pembeli Pada Minimarket Primart</span>
                 </div> <!-- /.logo -->
                 
             </div> <!-- /.top-header -->
-            <div class="main-header">
+            <div class="main-header" style="background-color: #efefef">
                 <div class="row">
                     <div class="main-header-left col-md-3 col-sm-6 col-xs-8">
                         <?php 
                         if (!isset($_GET['menu']) || $_GET['menu']=='home' ) {
                             //'', home
                         ?>
-                        <a href="#" class="btn-left arrow-left fa fa-angle-left"></a>
-                        <a href="#" class="btn-left arrow-right fa fa-angle-right"></a>
                         <?php 
                         }
                         ?>
@@ -34,6 +32,7 @@ if(isset($_GET['menu'])){
                         <?php
                         if (empty($_SESSION['apriori_toko_id'])) {
                         ?>
+                            <li><a href="location.php">Lokasi</a></li>
                             <li><a href="login.php">Login</a></li>
                         <?php 
                         }
@@ -54,7 +53,7 @@ if(isset($_GET['menu'])){
                     </div> <!-- /.menu-wrapper -->
                 </div> <!-- /.row -->
             </div> <!-- /.main-header -->
-            <div id="responsive-menu">
+            <div id="responsive-menu" style="background-color: #efefef">
                 <ul>
                     <li class="active"><a href="index.php">Beranda</a></li>
                     <?php
