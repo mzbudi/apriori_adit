@@ -38,7 +38,6 @@ include_once 'fungsi.php';
     <link href="images/icon/report.png" rel="shortcut icon" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500,500italic,700,900">
     <!--
@@ -63,7 +62,7 @@ include_once 'fungsi.php';
             box-sizing: border-box;
         }
 
-        
+
 
         .mySlides {
             display: none;
@@ -182,9 +181,10 @@ include_once 'fungsi.php';
             include "forbidden.php";
         }
     } else {
-        if ( isset($_SESSION['apriori_toko_id']) ) {
+        if (isset($_SESSION['apriori_toko_id'])) {
+            include "after_login.php";
             include "home.php";
-        }else{
+        } else {
             include "welcome_text.php";
             include "home.php";
         }
@@ -200,9 +200,6 @@ include_once 'fungsi.php';
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
-
-
     <!-- Preloader -->
     <script type="text/javascript">
         //<![CDATA[
@@ -216,6 +213,8 @@ include_once 'fungsi.php';
 
         var slideIndex = 0;
         showSlides();
+
+
 
         function showSlides() {
             var i;
@@ -245,6 +244,7 @@ include_once 'fungsi.php';
     <script src="import/daterangepicker/moment-cloud.min.js"></script>
     <script src="import/daterangepicker/daterangepicker.js"></script>
 
+
     <!-- Page script -->
     <script>
         $(function() {
@@ -271,7 +271,7 @@ include_once 'fungsi.php';
 
         });
     </script>
-
+    
 </body>
 
 </html>
